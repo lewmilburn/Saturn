@@ -6,8 +6,10 @@ class Hibernate
 {
     public function IsHibernating($Manifest): bool
     {
-        if (in_array($_SERVER['REQUEST_URI'], $Manifest->Hibernate)) {
-            return false;
+        foreach ($Manifest->Hibernate as $hibernatePath) {
+            if (str_contains($_SERVER['REQUEST_URI'], $hibernatePath)) {
+                return false;
+            }
         }
 
         return true;
