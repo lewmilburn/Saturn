@@ -32,6 +32,7 @@
   "PowerFeatures_Hibernate": "Hibernate",
   "PowerFeatures_Hibernate_Message": "This plugin will only load when it is needed.",
   "PowerFeatures_None": "This plugin does not use any Power Features.",
+  "Register": "Register",
   "SecurityAlert": "Security Alert",
   "SecurityAlert_Checksums": "One or more settings files have been changed outside of Saturn resulting in their checksums to become invalid. If you have changed the files manually, it is safe to reset their values. Otherwise, please check the files are correct before resetting.",
   "SecurityAlert_Disabled": "Saturn has been temporarily disabled due to a security alert.",

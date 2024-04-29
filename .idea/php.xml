@@ -11,12 +11,12 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="54b5d862-e5b4-49a1-8993-36a5f208fe86" name="PHP" home="/Applications/XAMPP/xamppfiles/bin/php-8.2.0" debugger_id="php.debugger.XDebug" custom_ini="$PROJECT_DIR$/../../../php.ini" />
+      <interpreter id="54b5d862-e5b4-49a1-8993-36a5f208fe86" name="PHP (project level)" home="/Applications/XAMPP/xamppfiles/bin/php-8.2.0" auto="false" debugger_id="php.debugger.XDebug" custom_ini="$PROJECT_DIR$/../../../php.ini" />
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
-      <interpreter name="PHP">
+      <interpreter name="PHP (project level)">
         <phpinfo binary_type="PHP" php_cgi="/Applications/XAMPP/xamppfiles/bin/php-cgi" php_cli="/Applications/XAMPP/xamppfiles/bin/php-8.2.0" path_separator=":" version="8.2.0">
           <additional_php_ini />
           <configuration_file>$PROJECT_DIR$/../../../php.ini</configuration_file>

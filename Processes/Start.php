@@ -45,7 +45,7 @@ function __(string $Text): string
     $Translation = new Translation();
     $XSS = new XSS();
 
-    $text = $Translation->Translate($Text);
+    $Text = $Translation->Translate($Text);
 
     return $XSS->Escape($Text);
 }

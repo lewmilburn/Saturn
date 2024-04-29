@@ -35,6 +35,6 @@ class Translation
     {
         $LanguageJSON = json_decode($LanguageFile);
 
-        return $LanguageJSON->$Key ?? 'Unknown';
+        return $LanguageJSON->$Key ?? '{'.$Key.'}';
     }
 }
