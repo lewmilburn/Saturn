@@ -74,8 +74,6 @@ $Actions->Run('Saturn.PluginManager.PostLoad');
 
 $Actions->Run('Saturn.PostStart');
 
-var_dump($SaturnPlugins);
-
 // ROUTER
 require_once __DIR__.'/Router.php';
 
