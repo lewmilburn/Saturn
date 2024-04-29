@@ -8,8 +8,10 @@
 
 namespace Saturn\DatabaseManager;
 
+use Exception;
 use mysqli;
 use mysqli_sql_exception;
+use Saturn\ErrorHandler;
 
 class MySQLiDB
 {
@@ -47,7 +49,18 @@ class MySQLiDB
             $Query .= ' LIMIT '.$Limit;
         }
 
-        $Result = $this->MySQLi->query($Query);
+        try {
+            $Result = $this->MySQLi->query($Query);
+        } catch (Exception $e) {
+            $EH = new ErrorHandler();
+            $EH->SaturnError(
+                '500',
+                'DBMS-4',
+                'Unexpected database error',
+                $e->getMessage(),
+                SATSYS_DOCS_URL.'/troubleshooting/errors/database#dbms-4'
+            );
+        }
 
         $this->error = null;
 
