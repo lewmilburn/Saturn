@@ -15,11 +15,9 @@ class RouteMain
 
     public function Register(): void
     {
-        if (WEBSITE_MODE == 0 /*|| (WEBSITE_MODE == 1 && AUTH)*/) {
-            // Homepage
-            $this->Router->GET('/', 'DefaultViews/NoHomepage.php');
-        } elseif (WEBSITE_MODE == 1) {
-            $this->Router->GET('/', 'DefaultViews/Maintenance.php');
+        if (WEBSITE_MODE == 1) {
+            require_once __DIR__ . '/../../DefaultViews/Maintenance.php';
+            exit;
         }
     }
 }

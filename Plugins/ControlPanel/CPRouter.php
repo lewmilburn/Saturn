@@ -72,6 +72,7 @@ class CPRouter
     private function Settings(bool $HasPermission): void
     {
         if ($HasPermission) {
+            $this->Router->GET(CPURL_PANEL.CPURL_PAGES, '../Plugins/ControlPanel/Views/Pages.php');
             $this->Router->GET(CPURL_PANEL.CPURL_PLUGINS, '../Plugins/ControlPanel/Views/Plugins.php');
             $this->Router->GET(CPURL_PANEL.CPURL_USERS, '../Plugins/ControlPanel/Views/Users.php');
             global $SaturnPlugins;
@@ -93,6 +94,11 @@ class CPRouter
     {
         if ($HasPermission) {
             $this->Router->GET(CPURL_PANEL.CPURL_EDIT, '../Plugins/ControlPanel/Views/Edit.php');
+            $DBMS = new DBMS();
+            $Pages = $DBMS->Select('*', 'pages', '1', 'all:assoc');
+            foreach ($Pages as $Page) {
+                $this->Router->GET(CPURL_PANEL.CPURL_EDIT.'/'.$Page['id'], '../Plugins/ControlPanel/Views/Edit.php');
+            }
         } else {
             $this->Router->GET(CPURL_PANEL.CPURL_EDIT, CPPAGE_NOACCESS);
         }

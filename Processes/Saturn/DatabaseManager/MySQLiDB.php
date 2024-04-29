@@ -101,4 +101,9 @@ class MySQLiDB
     {
         return $this->MySQLi->query('INSERT INTO `'.$Into.'` ('.$Columns.') VALUES ('.$Values.')');
     }
+
+    public function Query($Query)
+    {
+        return $this->MySQLi->query($Query);
+    }
 }

@@ -21,6 +21,10 @@ class Routes
         $RouteAPI = new RouteAPI($Router);
         $RouteAPI->Register();
 
+        require_once __DIR__.'/RoutePages.php';
+        $RoutePages = new RoutePages($Router);
+        $RoutePages->Register();
+
         echo '404 - Page not found.';
     }
 }

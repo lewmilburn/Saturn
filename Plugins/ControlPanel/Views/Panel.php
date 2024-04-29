@@ -17,13 +17,16 @@ $Permissions = new Permissions($_SESSION['UUID']);
             <?php $Actions = new Actions(); $Actions->Run('ControlPanel.DashboardContentStart'); ?>
             <div class="grid-block">
                 <div class="grid-item grid-padding">
-                    <span id="PageCount">...</span> Pages
+                    <span id="PageCount">0</span> Pages
                 </div>
             </div>
 
             <?php if ($Permissions->HasPermission(['administrator','panel_settings'],'OR')) { ?>
             <h2 class="text-subheader"><?= __CP('Settings'); ?></h2>
             <div class="grid-block">
+                <a href="<?= SATURN_ROOT; ?>/panel/pages" class="grid-item-link grid-padding">
+                    <?= __CP('Pages'); ?>
+                </a>
                 <a href="<?= SATURN_ROOT; ?>/panel/plugins" class="grid-item-link grid-padding">
                     <?= __CP('Plugins'); ?>
                 </a>

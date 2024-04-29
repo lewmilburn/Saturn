@@ -7,6 +7,7 @@ const CPURL_PANEL = '/panel';
 const CPURL_EDIT = '/edit';
 const CPURL_PLUGINS = '/plugins';
 const CPURL_USERS = '/users';
+const CPURL_PAGES = '/pages';
 
 const CPPAGE_NOACCESS = '../Plugins/ControlPanel/Views/NoAccess.php';
 const CPPAGE_LOGIN = '../Plugins/ControlPanel/Views/Login.php';

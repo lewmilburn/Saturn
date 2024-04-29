@@ -58,6 +58,11 @@ class DBMS
         return $this->Database->Select($What, DB_PREFIX.$From, $Where, $Action, $Order, $Limit);
     }
 
+    public function Query(string $Query)
+    {
+        return $this->Database->Query($Query);
+    }
+
     public function Insert(string $Into, string|null $Columns, string|null $Values): array|object|int|null
     {
         return $this->Database->Insert(DB_PREFIX.$Into, $Columns, $Values);
