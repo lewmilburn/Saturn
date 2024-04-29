@@ -2,7 +2,7 @@
 use Saturn\AccountManager\Permissions;
 use ControlPanel\Checksums;
 
-$Permissions = new Permissions($_SESSION['uuid']);
+$Permissions = new Permissions($_SESSION['UUID']);
 
 if (isset($_GET['resetconfirm'])) {
     if ($Permissions->HasPermission(['administrator','panel_settings'],'OR')) {

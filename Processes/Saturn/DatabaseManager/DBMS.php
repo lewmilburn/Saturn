@@ -34,7 +34,7 @@ class DBMS
         }
     }
 
-    public function Escape(string $String): string
+    public function Escape($String): string
     {
         return htmlspecialchars($String);
     }
