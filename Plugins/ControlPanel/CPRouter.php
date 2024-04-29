@@ -32,13 +32,13 @@ class CPRouter
     private function Account(bool $Authenticated): void
     {
         if ($Authenticated) {
-            $this->Router->GET(CPURL_ACCOUNT, '../Plugins/ControlPanel/Views/Account.php');
-            $this->Router->GET(CPURL_ACCOUNT.CPURL_JOIN, '../Plugins/ControlPanel/Views/Account.php');
-            $this->Router->GET(CPURL_ACCOUNT.CPURL_LOGOUT, '../Processes/Saturn/AccountManager/Logout.php');
+            $this->Router->GET(CPURL_ACCOUNT, CPPAGE_ACCOUNT);
+            $this->Router->GET(CPURL_ACCOUNT.CPURL_JOIN, CPPAGE_ACCOUNT);
+            $this->Router->GET(CPURL_ACCOUNT.CPURL_LOGOUT, CPPAGE_LOGOUT);
         } else {
-            $this->Router->GET('/account', CPPAGE_LOGIN);
-            $this->Router->GET('/account/join', '../Plugins/ControlPanel/Views/Join.php');
-            $this->Router->GET('/account/logout', '../Processes/Saturn/AccountManager/Logout.php');
+            $this->Router->GET(CPURL_ACCOUNT, CPPAGE_LOGIN);
+            $this->Router->GET(CPURL_ACCOUNT.CPURL_JOIN, CPPAGE_REGISTER);
+            $this->Router->GET(CPURL_ACCOUNT.CPURL_LOGOUT, CPPAGE_LOGOUT);
         }
     }
 

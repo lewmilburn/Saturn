@@ -28,7 +28,7 @@
                     <?= __('Maintenance_Mode_Message_2'); ?>
                 </p>
 
-                <a class="navigation-item dark:text-white" href="<?= SATURN_ROOT; ?>/account">
+                <a class="navigation-item dark:text-white" href="<?= SATURN_ROOT; ?>/panel">
                     <?= __('Admin_Login'); ?>
                 </a>
             </div>

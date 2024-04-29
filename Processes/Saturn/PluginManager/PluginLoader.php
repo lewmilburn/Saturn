@@ -27,7 +27,7 @@ class PluginLoader
 
             if ($Manifest->Hibernate !== false) {
                 $Hibernate = new Hibernate();
-                if ($Hibernate->Hibernate($Manifest)) {
+                if ($Hibernate->IsHibernating($Manifest)) {
                     $this->LoadStatus($Plugin, false, 'Plugin is hibernating. It will load and be ready to use when needed.');
                     continue;
                 }

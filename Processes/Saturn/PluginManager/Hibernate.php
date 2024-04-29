@@ -4,18 +4,9 @@ namespace Saturn\PluginManager;
 
 class Hibernate
 {
-    public function Hibernate($Manifest): bool
+    public function IsHibernating($Manifest): bool
     {
-        foreach ($Manifest->Hibernate as $Hibernate) {
-            return $this->URL($Hibernate);
-        }
-
-        return false;
-    }
-
-    public function URL($URL): bool
-    {
-        if (str_contains($_SERVER['REQUEST_URI'], $URL)) {
+        if (in_array($_SERVER['REQUEST_URI'], $Manifest->Hibernate)) {
             return false;
         }
 

@@ -7,8 +7,8 @@ const SATSYS_DOCS_URL = 'https://docs.saturncms.net/v/'.SATSYS_VERSION;
 const SATSYS_DISALLOWED_PAGES = ['Assets', 'Plugins', 'Processes', 'Settings', 'Storage', 'Themes', 'panel', 'account', 'api'];
 
 // Website modes
-const MODE_MAINT = 0;
-const MODE_LIVE = 1;
+const MODE_MAINT = 1;
+const MODE_LIVE = 0;
 
 // Website environemnts
 const ENV_PROD = 0;
