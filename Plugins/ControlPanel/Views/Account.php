@@ -2,7 +2,7 @@
 use Saturn\DatabaseManager\DBMS;
 use Saturn\HookManager\Actions;
 require_once __DIR__ . '/Include/Security.php';
-$UUID = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$UUID = $_SESSION['UUID'];
 $DBMS = new DBMS();
 $User = $DBMS->Select('*','user',"`uuid` = '".$DBMS->Escape($UUID)."'",'first:object');
 $Permissions = $DBMS->Select('*','user_permissions',"`uuid` = '".$DBMS->Escape($UUID)."'",'first:object');
@@ -20,7 +20,7 @@ $Permissions = $DBMS->Select('*','user_permissions',"`uuid` = '".$DBMS->Escape($
             <div class="grid lg:grid-cols-3 gap-4">
                 <div class="lg:col-span-2 grid gap-4">
                     <div class="grid-item grid-padding">
-Up                        No details for <?= $User->username; ?>.
+                        No details for <?= $User->username; ?>.
                     </div>
                 </div>
 
