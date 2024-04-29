@@ -1,4 +1,5 @@
 {
+  "Account": "Account",
   "Account_Already_Exists": "An account with this information already exists.",
   "Account_Created": "Account created, please login.",
   "Account_Logged_Out": "You have been logged out.",
@@ -47,6 +48,7 @@
   "User_Permissions_Panel_Access": "Can access Control Panel",
   "User_Permissions_Panel_Pages_Edit": "Can edit pages",
   "User_Permissions_Panel_Settings": "Can change settings, plugins, and themes.",
+  "Username": "Username",
   "Users": "Users",
   "Uninstall": "Uninstall",
   "Uninstall_Confirm": "Confirm Uninstall",
