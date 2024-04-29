@@ -83,15 +83,15 @@ if (!isset($ErrorMessage)) {
                         <td class="td"><?= __('Request_IP'); ?></td>
                         <td class="td"><?= Out($_SERVER['REMOTE_ADDR']); ?></td>
                     </tr>
-                    <tr>
-                        <td class="td"><?= __('Software_Version'); ?></td>
-                        <td class="td"><?= Out(SATSYS_VERSION); ?></td>
-                    </tr>
-                    <?php if (WEBSITE_ENV != 0) { ?>
+                    <?php if (WEBSITE_ENV === ENV_PROD) { ?>
                         <tr>
                             <td class="td" colspan="2">To see more advanced information please switch your website environment to development (0).</td>
                         </tr>
                     <?php } else { ?>
+                        <tr>
+                            <td class="td"><?= __('Software_Version'); ?></td>
+                            <td class="td"><?= Out(SATSYS_VERSION); ?></td>
+                        </tr>
                         <tr>
                             <td class="td"><?= __('PHP_Version'); ?></td>
                             <td class="td"><?= Out(PHP_VERSION); ?></td>

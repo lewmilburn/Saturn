@@ -19,7 +19,7 @@ $CSRF = new CSRF();
 <body class="body">
 
 <main class="main">
-    <img src="<?= SATURN_ROOT; ?>/Storage/Theme/Logo.webp" class="w-1/4 mx-auto" alt="Logo">
+    <img src="<?= SATURN_ROOT; ?>../../../Storage/Logo.webp" class="w-1/4 mx-auto" alt="Logo">
 
     <div class="pb-8">
         <form action="<?= SATURN_ROOT; ?>/API/Login" method="POST" class="flex">

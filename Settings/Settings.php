@@ -18,8 +18,8 @@ const WEBSITE_SALT = 'CHANGE_ME';
 // WEBSITE
 const WEBSITE_NAME = 'Saturn';
 const WEBSITE_LANGUAGE = 'en-gb';
-const WEBSITE_MODE = 0;
-const WEBSITE_ENV = 0;
+const WEBSITE_MODE = MODE_LIVE;
+const WEBSITE_ENV = ENV_PROD;
 const WEBSITE_CHARSET = 'utf-8';
 
 // SATURN

@@ -19,7 +19,7 @@ class RouteMain
             // Homepage
             $this->Router->GET('/', 'DefaultViews/NoHomepage.php');
         } elseif (WEBSITE_MODE == 1) {
-            $this->Router->GET('/', '/../Themes/'.THEME_SLUG.'/Maintenance.php');
+            $this->Router->GET('/', 'DefaultViews/Maintenance.php');
         }
     }
 }

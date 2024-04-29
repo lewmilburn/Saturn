@@ -55,15 +55,11 @@ class DBMS
             $What = '`'.$What.'`';
         }
 
-        $Result = $this->Database->Select($What, DB_PREFIX.$From, $Where, $Action, $Order, $Limit);
-
-        return $Result;
+        return $this->Database->Select($What, DB_PREFIX.$From, $Where, $Action, $Order, $Limit);
     }
 
     public function Insert(string $Into, string|null $Columns, string|null $Values): array|object|int|null
     {
-        $Result = $this->Database->Insert(DB_PREFIX.$Into, $Columns, $Values);
-
-        return $Result;
+        return $this->Database->Insert(DB_PREFIX.$Into, $Columns, $Values);
     }
 }

@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+
+/**
+ * Saturn View Manager - Maintenance.
+ *
+ * This file is used when maintenance mode is activated.
+ */
+?><!DOCTYPE html>
 <html lang="<?= WEBSITE_LANGUAGE; ?>">
     <head>
         <title><?= WEBSITE_NAME; ?></title>
@@ -10,7 +17,7 @@
         </nav>
 
         <main class="main">
-            <img src="<?= SATURN_ROOT; ?>/Storage/Theme/Logo.webp" class="w-1/4 mx-auto" alt="<?= WEBSITE_NAME; ?>">
+            <img src="<?= SATURN_ROOT; ?>../../Storage/Logo.webp" class="w-1/4 mx-auto" alt="<?= WEBSITE_NAME; ?>">
 
             <div class="pb-8">
                 <h1 class="text-header">

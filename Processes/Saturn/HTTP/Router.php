@@ -14,8 +14,6 @@ class Router
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $this->route($Route, $IncludePath);
-        } else {
-            $this->BadRequest();
         }
     }
 
@@ -99,11 +97,5 @@ class Router
         }
         require_once __DIR__.'/../../'.$IncludePath;
         exit;
-    }
-
-    public function BadRequest(): void
-    {
-        $Response = new Response();
-        $Response->HTTP405();
     }
 }
