@@ -14,7 +14,7 @@ use Saturn\SessionManager\Authenticate;
 $DB = new DBMS();
 $CSRF = new CSRF();
 
-$Result = $DB->Select('*', 'user', "`username` = '" . $DB->Escape($_POST['username']) . "'", 'first:object');
+$Result = $DB->Select('*', 'user', "`username` = '".$DB->Escape($_POST['username'])."'", 'first:object');
 
 if ($DB->RowCount() == 1) {
     if ($CSRF->Check()) {

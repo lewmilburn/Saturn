@@ -17,12 +17,12 @@ class RoutePages
     public function Register(): void
     {
         $DBMS = new DBMS();
-        $Page = $DBMS->Query("SELECT * FROM `".DB_PREFIX."pages` WHERE `url` = '".$DBMS->Escape($_SERVER['REQUEST_URI'])."';");
+        $Page = $DBMS->Query('SELECT * FROM `'.DB_PREFIX."pages` WHERE `url` = '".$DBMS->Escape($_SERVER['REQUEST_URI'])."';");
 
-        if ($Page !== NULL && $Page->num_rows !== 0) {
+        if ($Page !== null && $Page->num_rows !== 0) {
             $this->Router->GET($DBMS->Escape($_SERVER['REQUEST_URI']), 'DefaultViews/Page.php');
         } elseif ($DBMS->Escape($_SERVER['REQUEST_URI']) === '/') {
-            require_once __DIR__ . '/../../DefaultViews/NoHomepage.php';
+            require_once __DIR__.'/../../DefaultViews/NoHomepage.php';
             exit;
         }
     }
