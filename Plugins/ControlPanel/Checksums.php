@@ -16,6 +16,7 @@ class Checksums
         if ($Checksum['CoreDeveloper'] !== $CoreDeveloper) {
             return false;
         }
+
         return true;
     }
 
