@@ -1,6 +1,9 @@
 # Saturn
 Saturn is a content management system for publishers, educators, and everyone in-between. It's lightweight, blazing-fast, and incredibly powerful.
 
+## Documentation
+[User Guide and Developer Documentation](https://docs.saturncms.net) or [PHPDoc](https://pixelsetdev.github.io/Saturn)
+
 ## Contributing
 This branch '1.0.0-dev' is still being planned. Please don't add any major features without emailing contact@lewismilburn.com to discuss. You're more than welcome to improve existing code.
 
