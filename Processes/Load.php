@@ -15,7 +15,6 @@ if (PHP_VERSION < SATSYS_MINIMUM_PHP) {
 }
 
 // SETTINGS
-require_once __DIR__.'/../Settings/Developer.php';
 require_once __DIR__.'/../Settings/Settings.php';
 
 // TEST MANAGER
