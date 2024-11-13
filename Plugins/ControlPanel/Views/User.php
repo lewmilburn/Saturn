@@ -20,7 +20,7 @@ $Permissions = $DBMS->Select('*','user_permissions',"`uuid` = '".$DBMS->Escape($
             <div class="grid lg:grid-cols-3 gap-4">
                 <div class="lg:col-span-2 grid gap-4">
                     <div class="grid-item grid-padding">
-Up                        No details for <?= $User->username; ?>.
+                        No details for <?= $User->username; ?>.
                     </div>
                 </div>
 
