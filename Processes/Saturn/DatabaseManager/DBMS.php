@@ -60,7 +60,18 @@ class DBMS
 
     public function Query(string $Query)
     {
-        return $this->Database->Query($Query);
+        try {
+            return $this->Database->Query($Query);
+        } catch (\Exception $e) {
+            $err = new ErrorHandler();
+            $err->SaturnError(
+                '500',
+                'DBMS-4',
+                'An unexpected error occurred whilst executing the database query.',
+                $e->getMessage(),
+                SATSYS_DOCS_URL.'/troubleshooting/errors/database'
+            );
+        }
     }
 
     public function Insert(string $Into, string|null $Columns, string|null $Values): array|object|int|null

@@ -11,6 +11,6 @@
 //
 //                              SATURN CMS VERSION 1.0.0
 //                           PIXELSET -- APACHE LICENSE 2.0
-
+error_reporting(E_ALL);
 require_once __DIR__.'/Processes/Load.php';
 require_once __DIR__.'/Processes/Start.php';

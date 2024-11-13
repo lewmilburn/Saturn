@@ -16,13 +16,13 @@ use Saturn\SessionManager\Session;
 $Session = new Session();
 $Session->Start();
 
-register_shutdown_function('SaturnEnd');
-
 function SaturnEnd(): void
 {
     $Actions = new Actions();
     $Actions->Run('Saturn.End');
 }
+
+register_shutdown_function('SaturnEnd');
 
 // ACTIONS
 $ActionList = [];

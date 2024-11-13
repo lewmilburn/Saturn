@@ -32,7 +32,7 @@ $CSRF = new CSRF();
                 <?php if (isset($_GET['success'])) { ?>
                     <div class="alert-success">
                         <div class="alert-success-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
+                            <i class="fas fa-circle-check"></i>
                         </div>
                         <div class="alert-success-text">
                             <?php

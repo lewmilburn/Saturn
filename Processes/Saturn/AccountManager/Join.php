@@ -26,18 +26,29 @@ if ($DB->RowCount() == 0) {
         $Password = password_hash($_POST['password'], SECURITY_PASSWORD_ALGORITHM);
         $UniqID = $UUID->Generate();
 
-        $Result = $DB->Insert('user', '`id`, `uuid`, `username`, `email`, `password`', "NULL, '".$UniqID."', '".$Username."', '".$Email."', '".$Password."'");
-        $Result = $DB->Insert('user_permissions', '`id`, `uuid`', "NULL, '".$UniqID."'");
-        if ($DB->Error() == null) {
-            header('Location: /account?success=created');
-        } else {
+        try {
+            $Result = $DB->Insert('user', '`id`, `uuid`, `username`, `email`, `password`', "NULL, '" . $UniqID . "', '" . $Username . "', '" . $Email . "', '" . $Password . "'");
+            $Result = $DB->Insert('user_permissions', '`id`, `uuid`', "NULL, '" . $UniqID . "'");
+            if ($DB->Error() == null) {
+                header('Location: /account?success=created');
+            } else {
+                $EH = new ErrorHandler();
+                $EH->SaturnError(
+                    '500',
+                    $DB->Error(),
+                    'Database error',
+                    'There was a problem with the database query.',
+                    SATSYS_DOCS_URL . '/troubleshooting/errors/database#' . strtolower($DB->Error())
+                );
+            }
+        } catch (Exception $e) {
             $EH = new ErrorHandler();
             $EH->SaturnError(
                 '500',
-                $DB->Error(),
+                'DBMS-4',
                 'Database error',
-                'There was a problem with the database query.',
-                SATSYS_DOCS_URL.'/troubleshooting/errors/database#'.strtolower($DB->Error())
+                'There was a problem with the database query. '.$e->getMessage(),
+                SATSYS_DOCS_URL . '/troubleshooting/errors/database#' . strtolower($DB->Error())
             );
         }
     } else {

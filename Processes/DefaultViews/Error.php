@@ -36,11 +36,15 @@ if (!isset($ErrorMessage)) {
             <img src="<?= Out(SATURN_ROOT); ?>/Assets/Images/Saturn-logo.webp" class="w-1/4 mx-auto" alt="Logo">
 
             <div class="pb-8">
-                <h1 class="text-header">
-                    <?= __('Error'); ?> <?= Out($ErrorCode); ?>: <?= Out($ErrorName); ?>
+                <h1 class="text-header text-center">
+                    <?= __('Error'); ?> <?= Out($ErrorCode); ?>
                 </h1>
 
-                <p class="text-body">
+                <p class="text-subheader-nopt text-center"><?= Out($ErrorName); ?></p>
+
+                <br>
+
+                <p class="text-error">
                     <?= Out($ErrorDescription); ?>
                 </p>
             </div>
