@@ -23,7 +23,7 @@ if ($DB->RowCount() == 0) {
     if ($CSRF->Check()) {
         $Username = $DB->Escape($_POST['username']);
         $Email = $DB->Escape($_POST['email']);
-        $Password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $Password = password_hash($_POST['password'], SECURITY_PASSWORD_ALGORITHM);
         $UniqID = $UUID->Generate();
 
         $Result = $DB->Insert('user', '`id`, `uuid`, `username`, `email`, `password`', "NULL, '".$UniqID."', '".$Username."', '".$Email."', '".$Password."'");
